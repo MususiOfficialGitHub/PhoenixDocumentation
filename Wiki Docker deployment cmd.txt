@@ -1,0 +1,221 @@
+D:\wiki>docker compose up -d
+no configuration file provided: not found
+
+D:\wiki>docker-compose
+
+Usage:  docker compose [OPTIONS] COMMAND
+
+Define and run multi-container applications with Docker
+
+Options:
+      --ansi string                Control when to print ANSI control
+                                   characters ("never"|"always"|"auto")
+                                   (default "auto")
+      --compatibility              Run compose in backward compatibility mode
+      --dry-run                    Execute command in dry run mode
+      --env-file stringArray       Specify an alternate environment file
+  -f, --file stringArray           Compose configuration files
+      --parallel int               Control max parallelism, -1 for
+                                   unlimited (default -1)
+      --profile stringArray        Specify a profile to enable
+      --progress string            Set type of progress output (auto,
+                                   tty, plain, quiet) (default "auto")
+      --project-directory string   Specify an alternate working directory
+                                   (default: the path of the, first
+                                   specified, Compose file)
+  -p, --project-name string        Project name
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a service's running container
+  build       Build or rebuild services
+  config      Parse, resolve and render compose file in canonical format
+  cp          Copy files/folders between a service container and the local filesystem
+  create      Creates containers for a service
+  down        Stop and remove containers, networks
+  events      Receive real time events from containers
+  exec        Execute a command in a running container
+  images      List images used by the created containers
+  kill        Force stop service containers
+  logs        View output from containers
+  ls          List running compose projects
+  pause       Pause services
+  port        Print the public port for a port binding
+  ps          List containers
+  pull        Pull service images
+  push        Push service images
+  restart     Restart service containers
+  rm          Removes stopped service containers
+  run         Run a one-off command on a service
+  scale       Scale services
+  start       Start services
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop services
+  top         Display the running processes
+  unpause     Unpause services
+  up          Create and start containers
+  version     Show the Docker Compose version information
+  wait        Block until the first service container stops
+  watch       Watch build context for service and rebuild/refresh containers when files are updated
+
+Run 'docker compose COMMAND --help' for more information on a command.
+
+D:\wiki>
+D:\wiki>
+D:\wiki>
+D:\wiki>
+D:\wiki>docker-compose ls
+NAME                STATUS              CONFIG FILES
+
+D:\wiki>docker-compose up
+no configuration file provided: not found
+
+D:\wiki>code .
+
+D:\wiki>docker-compose up
+[+] Running 24/24
+ ✔ wiki 13 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                   108.6s
+   ✔ 661ff4d9561e Pull complete                                                                                              3.5s
+   ✔ 0f158788f409 Pull complete                                                                                             30.5s
+   ✔ f028dff98271 Pull complete                                                                                              2.9s
+   ✔ 18f25c33705d Pull complete                                                                                              4.0s
+   ✔ d9099eb02433 Pull complete                                                                                             12.4s
+   ✔ 4f4fb700ef54 Pull complete                                                                                              5.1s
+   ✔ d5d973a5a48d Pull complete                                                                                             11.3s
+   ✔ bfe9cd4a73ce Pull complete                                                                                             34.8s
+   ✔ b25d7b913d08 Pull complete                                                                                             13.5s
+   ✔ 09d780c18fcb Pull complete                                                                                             14.6s
+   ✔ b1ae5f098e80 Pull complete                                                                                             15.8s
+   ✔ 4858a24b7b39 Pull complete                                                                                             17.0s
+   ✔ 30f9e6b04988 Pull complete                                                                                             18.1s
+ ✔ db 9 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                          134.9s
+   ✔ 4abcf2066143 Already exists                                                                                             0.0s
+   ✔ e54d40fa3899 Pull complete                                                                                             17.6s
+   ✔ 63bba88902c4 Pull complete                                                                                             19.0s
+   ✔ 908252890a7b Pull complete                                                                                            119.8s
+   ✔ 28c626fde205 Pull complete                                                                                             30.0s
+   ✔ c8eb99bde370 Pull complete                                                                                             31.5s
+   ✔ 52b7eaf1cdf2 Pull complete                                                                                             33.1s
+   ✔ 1a9195d5564e Pull complete                                                                                             34.4s
+   ✔ b83e77e7f801 Pull complete                                                                                             34.4s
+[+] Running 4/4
+ ✔ Network wiki_default   Created                                                                                            0.1s
+ ✔ Volume "wiki_db-data"  Created                                                                                            0.0s
+ ✔ Container wiki-db-1    Created                                                                                            0.4s
+ ✔ Container wiki-wiki-1  Created                                                                                            0.2s
+Attaching to db-1, wiki-1
+db-1    | The files belonging to this database system will be owned by user "postgres".
+db-1    | This user must also own the server process.
+db-1    |
+db-1    | The database cluster will be initialized with locale "en_US.utf8".
+db-1    | The default database encoding has accordingly been set to "UTF8".
+db-1    | The default text search configuration will be set to "english".
+db-1    |
+db-1    | Data page checksums are disabled.
+db-1    |
+db-1    | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-1    | creating subdirectories ... ok
+db-1    | selecting dynamic shared memory implementation ... posix
+db-1    | selecting default max_connections ... 100
+db-1    | selecting default shared_buffers ... 128MB
+Gracefully stopping... (press Ctrl+C again to force)
+Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:80 -> 0.0.0.0:0: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
+
+D:\wiki>docker-compose up
+[+] Running 1/0
+ ✔ Container wiki-db-1  Running                                                                                              0.0s
+Attaching to db-1, wiki-1
+Gracefully stopping... (press Ctrl+C again to force)
+Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:80 -> 0.0.0.0:0: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
+
+D:\wiki>docker-compose up
+[+] Running 2/2
+ ✔ Container wiki-db-1    Running                                                                                            0.0s
+ ✔ Container wiki-wiki-1  Recreated                                                                                          0.6s
+Attaching to db-1, wiki-1
+wiki-1  | Loading configuration from /wiki/config.yml... OK
+wiki-1  | 2024-04-19T13:45:39.244Z [MASTER] info: =======================================
+wiki-1  | 2024-04-19T13:45:39.252Z [MASTER] info: = Wiki.js 2.5.301 =====================
+wiki-1  | 2024-04-19T13:45:39.254Z [MASTER] info: =======================================
+wiki-1  | 2024-04-19T13:45:39.254Z [MASTER] info: Initializing...
+wiki-1  | 2024-04-19T13:45:41.868Z [MASTER] info: Using database driver pg for postgres [ OK ]
+wiki-1  | 2024-04-19T13:45:41.895Z [MASTER] info: Connecting to database...
+wiki-1  | 2024-04-19T13:45:42.008Z [MASTER] info: Database Connection Successful [ OK ]
+wiki-1  | 2024-04-19T13:45:44.049Z [MASTER] warn: DB Configuration is empty or incomplete. Switching to Setup mode...
+wiki-1  | 2024-04-19T13:45:44.050Z [MASTER] info: Starting setup wizard...
+wiki-1  | 2024-04-19T13:45:45.667Z [MASTER] info: Starting HTTP server on port 3000...
+wiki-1  | 2024-04-19T13:45:45.667Z [MASTER] info: HTTP Server on port: [ 3000 ]
+wiki-1  | 2024-04-19T13:45:45.698Z [MASTER] info: HTTP Server: [ RUNNING ]
+wiki-1  | 2024-04-19T13:45:45.699Z [MASTER] info: 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+wiki-1  | 2024-04-19T13:45:45.699Z [MASTER] info:
+wiki-1  | 2024-04-19T13:45:45.700Z [MASTER] info: Browse to http://YOUR-SERVER-IP:3000/ to complete setup!
+wiki-1  | 2024-04-19T13:45:45.701Z [MASTER] info:
+wiki-1  | 2024-04-19T13:45:45.701Z [MASTER] info: 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+wiki-1  | 2024-04-19T13:47:18.713Z [MASTER] info: Creating data directories...
+wiki-1  | 2024-04-19T13:47:18.738Z [MASTER] info: Generating certificates...
+wiki-1  | 2024-04-19T13:47:19.240Z [MASTER] info: Persisting config to DB...
+wiki-1  | 2024-04-19T13:47:19.767Z [MASTER] info: Installing default locale...
+wiki-1  | 2024-04-19T13:47:19.786Z [MASTER] info: Creating default groups...
+wiki-1  | 2024-04-19T13:47:19.888Z [MASTER] info: Loaded 7 new editors: [ OK ]
+wiki-1  | 2024-04-19T13:47:19.976Z [MASTER] info: Loaded 12 new loggers: [ OK ]
+wiki-1  | 2024-04-19T13:47:20.151Z [MASTER] info: Loaded 27 new renderers: [ OK ]
+wiki-1  | 2024-04-19T13:47:20.215Z [MASTER] info: Loaded 9 new search engines: [ OK ]
+wiki-1  | 2024-04-19T13:47:20.330Z [MASTER] info: Loaded 11 new storage targets: [ OK ]
+wiki-1  | 2024-04-19T13:47:20.331Z [MASTER] info: Creating root administrator...
+wiki-1  | 2024-04-19T13:47:21.297Z [MASTER] info: Creating guest account...
+wiki-1  | 2024-04-19T13:47:21.311Z [MASTER] info: Creating default site navigation
+wiki-1  | 2024-04-19T13:47:21.334Z [MASTER] info: Setup is complete!
+wiki-1  | 2024-04-19T13:47:21.337Z [MASTER] info: Stopping Setup...
+wiki-1  | 2024-04-19T13:47:21.340Z [MASTER] info: Setup stopped. Starting Wiki.js...
+wiki-1  | 2024-04-19T13:47:23.667Z [MASTER] warn: Mail is not setup! Please set the configuration in the administration area!
+wiki-1  | 2024-04-19T13:47:23.943Z [MASTER] info: Loading GraphQL Schema...
+wiki-1  | 2024-04-19T13:47:25.940Z [MASTER] info: GraphQL Schema: [ OK ]
+wiki-1  | 2024-04-19T13:47:26.662Z [MASTER] info: HTTP Server on port: [ 3000 ]
+wiki-1  | 2024-04-19T13:47:26.803Z [MASTER] info: HTTP Server: [ RUNNING ]
+wiki-1  | 2024-04-19T13:47:27.282Z [MASTER] info: Loaded 16 new analytics providers: [ OK ]
+wiki-1  | 2024-04-19T13:47:27.427Z [MASTER] info: Loaded 21 authentication strategies: [ OK ]
+wiki-1  | 2024-04-19T13:47:27.503Z [MASTER] info: Loaded 4 new comment providers: [ OK ]
+wiki-1  | 2024-04-19T13:47:27.626Z [MASTER] info: No new editors found: [ SKIPPED ]
+wiki-1  | 2024-04-19T13:47:27.799Z [MASTER] info: No new loggers found: [ SKIPPED ]
+wiki-1  | 2024-04-19T13:47:28.158Z [MASTER] info: No new renderers found: [ SKIPPED ]
+wiki-1  | 2024-04-19T13:47:28.277Z [MASTER] info: No new search engines found: [ SKIPPED ]
+wiki-1  | 2024-04-19T13:47:28.455Z [MASTER] info: No new storage targets found: [ SKIPPED ]
+wiki-1  | 2024-04-19T13:47:28.460Z [MASTER] info: Checking for installed optional extensions...
+wiki-1  | 2024-04-19T13:47:28.515Z [MASTER] info: Optional extension git is installed. [ OK ]
+wiki-1  | 2024-04-19T13:47:28.534Z [MASTER] info: Optional extension pandoc was not found on this system. [ SKIPPED ]
+wiki-1  | 2024-04-19T13:47:28.567Z [MASTER] info: Optional extension puppeteer was not found on this system. [ SKIPPED ]
+wiki-1  | 2024-04-19T13:47:28.570Z [MASTER] info: Optional extension sharp was not found on this system. [ SKIPPED ]
+wiki-1  | 2024-04-19T13:47:28.603Z [MASTER] info: Authentication Strategy Local: [ OK ]
+wiki-1  | 2024-04-19T13:47:34.038Z [MASTER] info: (COMMENTS/DEFAULT) Initializing...
+wiki-1  | 2024-04-19T13:47:34.039Z [MASTER] info: (COMMENTS/DEFAULT) Initialization completed.
+wiki-1  | 2024-04-19T13:47:34.176Z [MASTER] info: Purging orphaned upload files...
+wiki-1  | 2024-04-19T13:47:34.194Z [MASTER] info: Syncing locales with Graph endpoint...
+wiki-1  | 2024-04-19T13:47:34.200Z [MASTER] info: Fetching latest updates from Graph endpoint...
+wiki-1  | 2024-04-19T13:47:35.345Z [MASTER] info: Purging orphaned upload files: [ COMPLETED ]
+wiki-1  | Loading configuration from /wiki/config.yml... OK
+wiki-1  | 2024-04-19T13:47:36.524Z [JOB] info: Rebuilding page tree...
+wiki-1  | 2024-04-19T13:47:38.024Z [MASTER] info: Fetching latest updates from Graph endpoint: [ COMPLETED ]
+wiki-1  | 2024-04-19T13:47:39.020Z [MASTER] info: Pulled latest locale updates for English from Graph endpoint: [ COMPLETED ]
+wiki-1  | 2024-04-19T13:47:39.057Z [MASTER] info: Syncing locales with Graph endpoint: [ COMPLETED ]
+wiki-1  | 2024-04-19T13:47:40.757Z [JOB] info: Using database driver pg for postgres [ OK ]
+wiki-1  | 2024-04-19T13:47:40.998Z [JOB] info: Rebuilding page tree: [ COMPLETED ]
+db-1    | 2024-04-19 13:49:20.776 UTC [50] LOG:  checkpoint starting: time
+db-1    | 2024-04-19 13:49:49.310 UTC [50] LOG:  checkpoint complete: wrote 284 buffers (1.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=28.251 s, sync=0.251 s, total=28.535 s; sync files=251, longest=0.007 s, average=0.001 s; distance=1388 kB, estimate=1388 kB
+wiki-1  | 2024-04-19T14:02:35.341Z [MASTER] info: Purging orphaned upload files...
+wiki-1  | 2024-04-19T14:02:35.350Z [MASTER] info: Purging orphaned upload files: [ COMPLETED ]
+wiki-1  | 2024-04-19T14:17:35.346Z [MASTER] info: Purging orphaned upload files...
+wiki-1  | 2024-04-19T14:17:35.349Z [MASTER] info: Purging orphaned upload files: [ COMPLETED ]
+db-1    | 2024-04-19 14:19:20.815 UTC [50] LOG:  checkpoint starting: time
+db-1    | 2024-04-19 14:19:20.970 UTC [50] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.107 s, sync=0.014 s, total=0.156 s; sync files=2, longest=0.010 s, average=0.007 s; distance=1 kB, estimate=1249 kB
+wiki-1  | 2024-04-20T12:48:16.171Z [MASTER] info: Purging orphaned upload files...
+wiki-1  | 2024-04-20T12:48:16.179Z [MASTER] info: Purging orphaned upload files: [ COMPLETED ]
+db-1    | 2024-04-20 12:50:02.092 UTC [50] LOG:  checkpoint starting: time
+db-1    | 2024-04-20 12:50:02.278 UTC [50] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.115 s, sync=0.021 s, total=0.186 s; sync files=2, longest=0.014 s, average=0.011 s; distance=1 kB, estimate=1124 kB
+wiki-1  | 2024-04-20T13:03:16.171Z [MASTER] info: Purging orphaned upload files...
+wiki-1  | 2024-04-20T13:03:16.177Z [MASTER] info: Purging orphaned upload files: [ COMPLETED ]
+db-1    | 2024-04-22 05:30:17.869 UTC [50] LOG:  checkpoint starting: time
+db-1    | 2024-04-22 05:30:18.008 UTC [50] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.110 s, sync=0.008 s, total=0.139 s; sync files=2, longest=0.005 s, average=0.004 s; distance=1 kB, estimate=1012 kB
+Gracefully stopping... (press Ctrl+C again to force)
+[+] Stopping 2/2
+ ✔ Container wiki-wiki-1  Stopped                                                                                            1.0s
+ ✔ Container wiki-db-1    Stopped                                                                                            0.5s
+canceled
